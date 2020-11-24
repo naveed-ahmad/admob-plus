@@ -1,10 +1,12 @@
 import { exec } from 'cordova'
+import { IBannerRequest, AdSizeType } from '@admob-plus/core'
 
 import Banner from './banner'
 import { execAsync, fireDocumentEvent, NativeActions } from './base'
 import Interstitial from './interstitial'
 import RewardVideo from './reward-video'
 import AdMobState from './state'
+import { BannerAd } from './banner'
 
 class AdMob {
   public banner: Banner
@@ -30,6 +32,10 @@ class AdMob {
     )
   }
 
+  public get BannerAd() {
+    return BannerAd
+  }
+
   public setAppMuted(value: boolean) {
     return execAsync(NativeActions.set_app_muted, [value])
   }
@@ -44,11 +50,11 @@ class AdMob {
 
   private ready() {
     exec(
-      event => {
+      (event) => {
         this.state.applicationId = event.data.applicationId
         fireDocumentEvent(event.type, event.data)
       },
-      err => {
+      (err) => {
         alert(err)
       },
       NativeActions.Service,

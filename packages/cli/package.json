@@ -1,22 +1,20 @@
 {
   "name": "admob-plus",
   "description": "AdMob Plus CLI",
-  "version": "0.15.3",
-  "bin": {
-    "admob-plus": "./bin/run"
-  },
+  "version": "0.15.8",
+  "bin": "./bin/run",
   "dependencies": {
     "@oclif/command": "^1",
     "@oclif/config": "^1",
-    "@oclif/plugin-help": "^2",
-    "clipboardy": "^2.0.0",
+    "@oclif/plugin-help": "^3",
+    "clipboardy": "^2.3.0",
     "elementtree": "^0.1.7",
-    "envinfo": "^7.3.1",
-    "execa": "^1.0.0",
-    "fs-extra": "^8.0.1",
-    "lodash": "^4.17.11",
-    "read-pkg-up": "^6.0.0",
-    "tslib": "^1"
+    "envinfo": "^7.7.3",
+    "execa": "^4.1.0",
+    "fs-extra": "^9.0.1",
+    "lodash": "^4.17.20",
+    "read-pkg-up": "^7.0.1",
+    "tslib": "^2"
   },
   "devDependencies": {
     "@oclif/dev-cli": "^1",
@@ -25,16 +23,16 @@
     "@types/chai": "^4",
     "@types/clipboardy": "^2.0.1",
     "@types/elementtree": "^0.1.0",
-    "@types/fs-extra": "^7.0.0",
-    "@types/mocha": "^5.2.6",
-    "@types/node": "^12",
+    "@types/fs-extra": "^9.0.4",
+    "@types/mocha": "^8.0.4",
+    "@types/node": "^14",
     "chai": "^4",
-    "globby": "^9",
-    "mocha": "^6",
-    "nyc": "^14",
-    "ts-node": "^8",
-    "tslint": "^5",
-    "typescript": "^3.4"
+    "globby": "^11",
+    "mocha": "^8.2.1",
+    "nyc": "^15",
+    "ts-node": "^9",
+    "tslint": "^6",
+    "typescript": "^4.1"
   },
   "engines": {
     "node": ">=8.0.0"
@@ -64,5 +62,12 @@
     "test": "nyc --extension .ts mocha --forbid-only \"test/**/*.test.ts\"",
     "version": "oclif-dev readme && git add README.md"
   },
-  "types": "lib/index.d.ts"
+  "types": "lib/index.d.ts",
+  "mocha": {
+    "require": "ts-node/register",
+    "watch-extensions": "ts",
+    "recursive": true,
+    "reporter": "spec",
+    "timeout": 30000
+  }
 }

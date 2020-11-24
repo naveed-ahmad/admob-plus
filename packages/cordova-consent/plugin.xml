@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <plugin id="cordova-plugin-consent" version="0.0.0"
-        xmlns="http://apache.org/cordova/ns/plugins/1.0"
-        xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android">
     <name>@admob-plus/cordova-consent</name>
     <js-module name="Consent" src="www/consent.js">
         <clobbers target="consent" />
@@ -13,11 +13,32 @@
                 <param name="android-package" value="cordova.plugin.consent.Consent"/>
             </feature>
 
-            <source-file src="src/android/Consent.java" target-dir="src/cordova/plugin/consent" />
         </config-file>
+
+        <source-file src="src/android/Consent.java" target-dir="src/cordova/plugin/consent" />
 
         <preference name="CONSENT_SDK_VERSION" default="+" />
 
         <framework src="com.google.android.ads.consent:consent-library:$CONSENT_SDK_VERSION" />
+    </platform>
+
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="Consent">
+                <param name="ios-package" value="AMSConsent" />
+            </feature>
+        </config-file>
+
+        <header-file src="src/ios/AMSConsent-Bridging-Header.h" type="BridgingHeader" />
+        <source-file src="src/ios/AMSConsent.swift" />
+
+        <podspec>
+            <config>
+                <source url="https://github.com/CocoaPods/Specs.git" />
+            </config>
+            <pods use-frameworks="true">
+                <pod name="PersonalizedAdConsent" spec="~> 1.0.5" />
+            </pods>
+        </podspec>
     </platform>
 </plugin>

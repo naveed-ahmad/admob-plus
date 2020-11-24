@@ -3,6 +3,154 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.40.0](https://github.com/admob-plus/admob-plus/compare/cordova-admob-plus@0.39.0...cordova-admob-plus@0.40.0) (2020-11-22)
+
+
+### Features
+
+* **cordova:** update default PLAY_SERVICES_VERSION to 19.5.0 ([ee541ff](https://github.com/admob-plus/admob-plus/commit/ee541ff753405bd526a778e93ede8ae179c8cd8a))
+* **cordova:** update Google-Mobile-Ads-SDK to v7.68 ([49ae810](https://github.com/admob-plus/admob-plus/commit/49ae810c9fd80364a0a34decd4e0c1921a926133))
+
+
+
+
+
+# [0.39.0](https://github.com/admob-plus/admob-plus/compare/cordova-admob-plus@0.37.0...cordova-admob-plus@0.39.0) (2020-10-18)
+
+
+### Bug Fixes
+
+* **cordova-ios:** anchor banner height so it displays correctly ([85ec428](https://github.com/admob-plus/admob-plus/commit/85ec428eb22878b59dd52a8cbe18e71fee0bb228))
+* **cordova-ios:** display both top + bottom banner correctly ([ea75add](https://github.com/admob-plus/admob-plus/commit/ea75add356b31223459e36d2c6f44956a1e14a27))
+* **cordova-ios:** fix adSize reading wrong key ([c4f08cc](https://github.com/admob-plus/admob-plus/commit/c4f08cc333afa97434341158bce0e847105978dd))
+
+
+### Features
+
+* **cordova:** add BannerAd class ([cc51b7d](https://github.com/admob-plus/admob-plus/commit/cc51b7db5d3b0ec18c1e661c12c4a1c1f6f17e4f))
+* **cordova:** require cordova-ios >= 5.0.0 ([a9a435e](https://github.com/admob-plus/admob-plus/commit/a9a435eddf904f43561ea3dcbeb4268996c76e04))
+* **cordova:** update Google-Mobile-Ads-SDK to v7.66 ([4f60597](https://github.com/admob-plus/admob-plus/commit/4f60597f89ad4658f5eb8a28dd2a48849f82a9dc))
+* **cordova-ios:** add RewardVideoLoadFail Event on iOS ([#160](https://github.com/admob-plus/admob-plus/issues/160)) ([9cd7927](https://github.com/admob-plus/admob-plus/commit/9cd7927c763c26249bbc56c261675d7ee9c3c338))
+
+
+
+
+
+# [0.38.0](https://github.com/admob-plus/admob-plus/compare/cordova-admob-plus@0.37.0...cordova-admob-plus@0.38.0) (2020-10-07)
+
+
+### Bug Fixes
+
+* **cordova-ios:** anchor banner height so it displays correctly ([85ec428](https://github.com/admob-plus/admob-plus/commit/85ec428eb22878b59dd52a8cbe18e71fee0bb228))
+* **cordova-ios:** fix adSize reading wrong key ([c4f08cc](https://github.com/admob-plus/admob-plus/commit/c4f08cc333afa97434341158bce0e847105978dd))
+
+
+### Features
+
+* **cordova:** add BannerAd class ([cc51b7d](https://github.com/admob-plus/admob-plus/commit/cc51b7db5d3b0ec18c1e661c12c4a1c1f6f17e4f))
+* **cordova:** require cordova-ios >= 5.0.0 ([a9a435e](https://github.com/admob-plus/admob-plus/commit/a9a435eddf904f43561ea3dcbeb4268996c76e04))
+* **cordova:** update Google-Mobile-Ads-SDK to v7.66 ([4f60597](https://github.com/admob-plus/admob-plus/commit/4f60597f89ad4658f5eb8a28dd2a48849f82a9dc))
+
+
+
+
+
+# [0.37.0](https://github.com/admob-plus/admob-plus/compare/cordova-admob-plus@0.36.0...cordova-admob-plus@0.37.0) (2020-09-12)
+
+
+### Features
+
+* **cordova-android:** update default PLAY_SERVICES_VERSION to v19.4.0 ([ed82190](https://github.com/admob-plus/admob-plus/commit/ed82190814d742464524f8d80abe86eee1a2c658))
+* **cordova-ios:** update Google-Mobile-Ads-SDK to v7.65 ([bc46cba](https://github.com/admob-plus/admob-plus/commit/bc46cbac5fa8210120302b5cfb9122328b90ebb0))
+
+
+
+
+
+# [0.36.0](https://github.com/admob-plus/admob-plus/compare/cordova-admob-plus@0.35.0...cordova-admob-plus@0.36.0) (2020-04-11)
+
+
+### Bug Fixes
+
+* **cordova-android:** handle null interstitialAd for isLoaded() ([620a92e](https://github.com/admob-plus/admob-plus/commit/620a92e))
+
+
+### Features
+
+* **cordova-android:** update default PLAY_SERVICES_VERSION to v19.0.1 ([3de3f59](https://github.com/admob-plus/admob-plus/commit/3de3f59))
+* **cordova-ios:** update Google-Mobile-Ads-SDK to v7.57 ([514e472](https://github.com/admob-plus/admob-plus/commit/514e472))
+
+
+
+
+
+# [0.35.0](https://github.com/admob-plus/admob-plus/compare/cordova-admob-plus@0.34.0...cordova-admob-plus@0.35.0) (2020-01-28)
+
+
+### Features
+
+* **cordova:** delay app measurement ([5ce4ac5](https://github.com/admob-plus/admob-plus/commit/5ce4ac5))
+
+
+
+
+
+# [0.34.0](https://github.com/admob-plus/admob-plus/compare/cordova-admob-plus@0.33.0...cordova-admob-plus@0.34.0) (2020-01-20)
+
+
+### Features
+
+* **cordova:** allow request non-personalized ads ([42d5708](https://github.com/admob-plus/admob-plus/commit/42d5708))
+
+
+
+
+
+# [0.33.0](https://github.com/admob-plus/admob-plus/compare/cordova-admob-plus@0.32.0...cordova-admob-plus@0.33.0) (2019-12-16)
+
+
+### Bug Fixes
+
+* **cordova-android:** avoid NullPointerException ([ff742fd](https://github.com/admob-plus/admob-plus/commit/ff742fd))
+
+
+### Features
+
+* **cordova-android:** update default PLAY_SERVICES_VERSION to v18.3.0 ([c0a26f2](https://github.com/admob-plus/admob-plus/commit/c0a26f2))
+
+
+
+
+
+# [0.32.0](https://github.com/admob-plus/admob-plus/compare/cordova-admob-plus@0.31.0...cordova-admob-plus@0.32.0) (2019-11-17)
+
+
+### Features
+
+* **cordova-ios:** update Google-Mobile-Ads-SDK to v7.51 ([b1fcbac](https://github.com/admob-plus/admob-plus/commit/b1fcbac))
+
+
+
+
+
+# [0.31.0](https://github.com/admob-plus/admob-plus/compare/cordova-admob-plus@0.30.0...cordova-admob-plus@0.31.0) (2019-09-22)
+
+
+### Bug Fixes
+
+* **cordova-ios:** fix white screen showing from hidden banner, close [#97](https://github.com/admob-plus/admob-plus/issues/97) ([a482636](https://github.com/admob-plus/admob-plus/commit/a482636))
+* **cordova-ios:** update deprecated method sendSubviewToBack to sendSubview(toBack:) ([#106](https://github.com/admob-plus/admob-plus/issues/106)) ([9216c5d](https://github.com/admob-plus/admob-plus/commit/9216c5d))
+
+
+### Features
+
+* **cordova-ios:** update Google-Mobile-Ads-SDK to v7.50 ([6e14157](https://github.com/admob-plus/admob-plus/commit/6e14157))
+* **core:** export Events, NativeActions ([f42d2c4](https://github.com/admob-plus/admob-plus/commit/f42d2c4))
+
+
+
+
+
 # [0.30.0](https://github.com/admob-plus/admob-plus/compare/cordova-admob-plus@0.29.1...cordova-admob-plus@0.30.0) (2019-06-05)
 
 

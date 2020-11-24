@@ -1,0 +1,33 @@
+{
+  "name": "@admob-plus/react-native",
+  "version": "0.1.2",
+  "description": "AdMob Plus for React Native",
+  "main": "index.js",
+  "scripts": {
+    "prepare": "tsc"
+  },
+  "keywords": [
+    "react-native"
+  ],
+  "peerDependencies": {
+    "react-native": "*"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.2",
+    "@types/react-native": "^0.60.15",
+    "react": "^16.9.0",
+    "react-native": "^0.60.5",
+    "typescript": "^3.6.3"
+  },
+  "author": "Ratson",
+  "license": "MIT",
+  "repository": "admob-plus/admob-plus",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "*.ts",
+    "*.md",
+    "dist"
+  ]
+}

@@ -1,7 +1,6 @@
 {
-  "private": true,
   "name": "cordova-plugin-consent",
-  "version": "0.15.1",
+  "version": "0.18.0",
   "description": "Google Consent SDK Cordova Plugin",
   "main": "www/consent.js",
   "typings": "www/consent.d.ts",
@@ -10,10 +9,10 @@
   },
   "devDependencies": {
     "@types/cordova": "^0.0.34",
-    "@types/node": "^10.12.10",
-    "rollup": "^0.67.3",
-    "ts-node": "^7.0.1",
-    "typescript": "^3.2.1"
+    "@types/node": "^14.14.9",
+    "rollup": "^2.33.3",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.1.2"
   },
   "author": "Ratson",
   "license": "MIT",
@@ -28,7 +27,8 @@
   "cordova": {
     "id": "cordova-plugin-consent",
     "platforms": [
-      "android"
+      "android",
+      "ios"
     ]
   },
   "eslintConfig": {

@@ -1,34 +1,21 @@
 {
   "name": "cordova-admob-plus",
-  "version": "0.30.0",
+  "version": "0.40.0",
   "description": "Trustable Google AdMob Cordova Plugin",
   "main": "www/admob.js",
   "typings": "www/admob.d.ts",
   "scripts": {
-    "prepare": "run-s prepare:*",
-    "prepare:gen": "ts-node scripts/gen",
-    "prepare:build": "rollup -c",
-    "prepare:clean": "del src/.DS_Store src/**/.DS_Store"
+    "prepare": "rollup -c"
   },
   "devDependencies": {
-    "@admob-plus/core": "^0.7.4",
+    "@admob-plus/core": "^0.9.3",
+    "@rollup/plugin-commonjs": "^16.0.0",
+    "@rollup/plugin-node-resolve": "^10.0.0",
+    "@rollup/plugin-typescript": "^6.1.0",
     "@types/cordova": "^0.0.34",
-    "@types/execa": "^0.9.0",
-    "@types/lodash": "^4.14.133",
-    "@types/node": "^12.0.4",
-    "cordova": "9.0.1-nightly.2019.4.26.f7637760",
-    "del-cli": "^2.0.0",
-    "execa": "^1.0.0",
-    "fast-glob": "^2.2.7",
-    "find-cache-dir": "^3.0.0",
-    "lodash": "^4.17.11",
+    "cordova": "10.0.0",
     "npm-run-all": "^4.1.5",
-    "replace-in-file": "^4.1.0",
-    "rollup": "^1.13.1",
-    "rollup-plugin-commonjs": "^10.0.0",
-    "rollup-plugin-node-resolve": "^5.0.1",
-    "rollup-plugin-typescript2": "^0.21.1",
-    "ts-node": "^8.2.0"
+    "rollup": "^2.33.3"
   },
   "author": "Ratson",
   "license": "MIT",

@@ -3,6 +3,52 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.9.3](https://github.com/admob-plus/admob-plus/compare/@admob-plus/core@0.9.2...@admob-plus/core@0.9.3) (2020-11-22)
+
+**Note:** Version bump only for package @admob-plus/core
+
+
+
+
+
+## [0.9.2](https://github.com/admob-plus/admob-plus/compare/@admob-plus/core@0.9.1...@admob-plus/core@0.9.2) (2020-09-12)
+
+**Note:** Version bump only for package @admob-plus/core
+
+
+
+
+
+## [0.9.1](https://github.com/admob-plus/admob-plus/compare/@admob-plus/core@0.9.0...@admob-plus/core@0.9.1) (2020-04-11)
+
+**Note:** Version bump only for package @admob-plus/core
+
+
+
+
+
+# [0.9.0](https://github.com/admob-plus/admob-plus/compare/@admob-plus/core@0.8.0...@admob-plus/core@0.9.0) (2020-01-20)
+
+
+### Features
+
+* **cordova:** allow request non-personalized ads ([42d5708](https://github.com/admob-plus/admob-plus/commit/42d5708))
+
+
+
+
+
+# [0.8.0](https://github.com/admob-plus/admob-plus/compare/@admob-plus/core@0.7.4...@admob-plus/core@0.8.0) (2019-09-22)
+
+
+### Features
+
+* **core:** export Events, NativeActions ([f42d2c4](https://github.com/admob-plus/admob-plus/commit/f42d2c4))
+
+
+
+
+
 ## [0.7.4](https://github.com/admob-plus/admob-plus/compare/@admob-plus/core@0.7.3...@admob-plus/core@0.7.4) (2019-04-28)
 
 **Note:** Version bump only for package @admob-plus/core

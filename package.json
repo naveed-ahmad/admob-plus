@@ -2,51 +2,56 @@
   "name": "admob-plus-monorepo",
   "private": true,
   "scripts": {
+    "postinstall": "is-ci || husky install",
+    "prepare": "lerna run prepare --ignore @admob-plus/ionic",
     "test": "run-s test:*",
-    "test:cli": "cd packages/cli && run-s test",
+    "test:pkgs": "lerna run test",
     "test:jest": "jest",
-    "lint": "tslint --project packages/cordova",
-    "test-android": "run-s test-android:*",
-    "test-android:testbed": "cordova-testbed --platform android --plugin packages/cordova --build-only",
-    "test-android:example": "cd examples/basic && run-s link-plugin && cordova build android",
-    "test-ios": "run-s test-ios:*",
-    "test-ios:testbed": "cordova-testbed --platform ios --plugin packages/cordova --build-only",
-    "test-ios:example": "cd examples/basic && run-s link-plugin && cordova build ios"
+    "lint": "eslint --cache --ext .js,.jsx,.ts,tsx .",
+    "test-android": "run-s 'test-android:*'",
+    "//test-android:testbed": "cordova-testbed --platform android --plugin packages/cordova --build-only",
+    "test-android:example": "cd examples/basic && cordova build android",
+    "test-ios": "run-s 'test-ios:*'",
+    "test-ios:lint": "swiftlint --config $(pwd)/.swiftlint.yml --path packages/cordova/src/ios",
+    "//test-ios:testbed": "cordova-testbed --platform ios --plugin packages/cordova --build-only",
+    "test-ios:example": "cd examples/basic && cordova build ios"
   },
   "devDependencies": {
-    "@commitlint/cli": "^7.6.1",
-    "@commitlint/config-conventional": "^7.6.0",
-    "@commitlint/config-lerna-scopes": "^7.6.0",
-    "@commitlint/prompt-cli": "^7.6.1",
-    "@types/jest": "^24.0.13",
-    "cordova": "9.0.1-nightly.2019.4.26.f7637760",
+    "@admob-plus-internal/cli": "file:./internal/cli",
+    "@admob-plus-internal/tsconfig": "file:./internal/tsconfig",
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@commitlint/config-lerna-scopes": "^11.0.0",
+    "@commitlint/prompt-cli": "^11.0.0",
+    "@types/jest": "^26.0.15",
+    "cordova": "10.0.0",
     "cordova-testbed": "^0.8.0",
-    "eslint": "^5.16.0",
-    "eslint-config-concise": "^0.36.0",
-    "eslint-config-concise-browser": "^0.36.0",
-    "eslint-config-concise-esnext": "^0.36.0",
-    "eslint-plugin-react": "^7.13.0",
-    "husky": "^2.3.0",
-    "jest": "^24.8.0",
-    "lerna": "^3.14.1",
-    "lint-staged": "^8.1.7",
+    "eslint": "^7.14.0",
+    "eslint-config-concise": "^0.39.1",
+    "eslint-config-concise-browser": "^0.39.0",
+    "eslint-config-concise-esnext": "^0.39.0",
+    "eslint-config-concise-typescript": "^0.39.0",
+    "eslint-plugin-react": "^7.21.5",
+    "execa": "^4.1.0",
+    "husky": "^5.0.1",
+    "is-ci": "^2.0.0",
+    "jest": "^26.6.3",
+    "lerna": "^3.22.1",
+    "lint-staged": "^10.5.1",
     "npm-run-all": "^4.1.5",
-    "prettier": "^1.17.1",
-    "prettier-eslint-cli": "^5.0.0-beta.0",
-    "prettier-tslint": "^0.4.2",
-    "remark-cli": "^6.0.1",
+    "prettier": "^2.2.0",
+    "prettier-eslint-cli": "^5.0.0",
+    "read-pkg": "^5.2.0",
+    "remark-cli": "^9.0.0",
     "remark-lint-are-links-valid-duplicate": "^0.2.2",
     "remark-lint-heading-whitespace": "^1.0.0",
-    "remark-lint-no-empty-sections": "^3.0.0",
+    "remark-lint-no-empty-sections": "^4.0.0",
     "remark-lint-no-trailing-spaces": "^2.0.1",
-    "remark-preset-lint-consistent": "^2.0.2",
-    "remark-preset-lint-markdown-style-guide": "^2.1.2",
-    "remark-preset-lint-recommended": "^3.0.2",
-    "ts-jest": "^24.0.2",
-    "tslint": "^5.16.0",
-    "tslint-config-concise": "^0.36.0",
-    "tslint-eslint-rules": "^5.4.0",
-    "typescript": "^3.4.5"
+    "remark-preset-lint-consistent": "^4.0.0",
+    "remark-preset-lint-markdown-style-guide": "^4.0.0",
+    "remark-preset-lint-recommended": "^5.0.0",
+    "ts-jest": "^26.4.4",
+    "typescript": "^4.1.2"
   },
   "repository": "admob-plus/admob-plus",
   "commitlint": {
@@ -54,56 +59,15 @@
       "@commitlint/config-conventional"
     ]
   },
-  "eslintConfig": {
-    "extends": [
-      "concise"
-    ]
-  },
-  "jest": {
-    "transform": {
-      "^.+\\.tsx?$": "ts-jest"
-    },
-    "testPathIgnorePatterns": [
-      "/node_modules/",
-      "<rootDir>/packages/cli/"
-    ],
-    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.tsx?$",
-    "testURL": "http://localhost/",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "jsx",
-      "json",
-      "node"
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
-    "*.js": [
+    "*.{js,jsx,ts,tsx}": [
       "prettier-eslint --write",
-      "eslint --fix",
-      "git add"
+      "eslint --ext .js,.jsx,.ts,tsx --fix"
     ],
-    "*.md": [
-      "remark --no-stdout"
-    ],
-    "*.ts": [
-      "prettier-tslint fix",
-      "git add"
-    ],
-    "examples/*/package.json": [
-      "prettier --write",
-      "git add"
-    ],
-    "packages/cordova/src/ios/*.swift": [
-      "swiftlint lint --strict --path"
-    ]
+    "*.md": "remark --no-stdout",
+    "examples/*/package.json": "prettier --write",
+    "packages/cli/oclif.manifest.json": "exit 1",
+    "packages/cordova/src/ios/*.swift": "swiftlint lint --strict --path"
   },
   "remarkConfig": {
     "plugins": [
@@ -114,9 +78,6 @@
       "remark-lint-heading-whitespace",
       "remark-lint-no-empty-sections"
     ]
-  },
-  "resolutions": {
-    "node-sass": "^4.12.0"
   },
   "workspaces": {
     "nohoist": [
@@ -129,6 +90,8 @@
       "**/@ionic-native/**",
       "**/@ionic-native/splash-screen",
       "**/@ionic-native/status-bar",
+      "**/@types/mocha",
+      "**/@types/react-native",
       "**/ionic-angular",
       "**/ionic-angular/**",
       "**/ionicons",
@@ -139,7 +102,7 @@
     ],
     "packages": [
       "packages/*",
-      "examples/*",
+      "internal/*",
       "website"
     ]
   }
